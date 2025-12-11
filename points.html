@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>نقاطي</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>نقاطك الحالية</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a> |
+            <a href="survey1.html">استبيان 1</a>
+        </nav>
+    </header>
+    <main>
+        <p>لديك <span id="pointsDisplay">0</span> نقاط.</p>
+    </main>
+    <script>
+        let points = parseInt(localStorage.getItem("userPoints")) || 0;
+        document.getElementById("pointsDisplay").innerText = points;
+    </script>
+</body>
+</html>
