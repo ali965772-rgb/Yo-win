@@ -23,6 +23,14 @@
         </form>
         <p id="message1"></p>
     </main>
-    <script src="assets/script.js"></script>
+    <script let points = parseInt(localStorage.getItem("userPoints")) || 0;
+
+document.getElementById("surveyForm1").addEventListener("submit", function(e){
+    e.preventDefault();
+    points += 10;
+    localStorage.setItem("userPoints", points);
+    document.getElementById("message1").innerText = "تم إرسال الاستبيان! حصلت على 10 نقاط.";
+});
+        </script>
 </body>
 </html>
