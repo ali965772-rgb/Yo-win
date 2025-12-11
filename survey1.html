@@ -23,7 +23,8 @@
         </form>
         <p id="message1"></p>
     </main>
-    <script let points = parseInt(localStorage.getItem("userPoints")) || 0;
+    <script>
+        let points = parseInt(localStorage.getItem("userPoints")) || 0;
 
 document.getElementById("surveyForm1").addEventListener("submit", function(e){
     e.preventDefault();
